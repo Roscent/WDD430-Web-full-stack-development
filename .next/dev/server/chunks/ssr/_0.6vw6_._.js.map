@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/USER/OneDrive/Desktop/WDD430-Web-full-stack-development/app/like-button.js"],"sourcesContent":["'use client';\r\n\r\nimport { useState } from 'react';\r\n\r\nexport default function LikeButton() {\r\n    const [likes, setLikes] = useState(0);\r\n\r\nfunction handleClick() {\r\n  setLikes(likes + 1);\r\n}\r\n\r\nreturn <button onClick={handleClick}>Like ({likes})</button>\r\n}"],"names":["LikeButton","likes","setLikes","handleClick","onClick"],"mappings":";;;;;AAEA;AAFA;;;AAIe,SAASA;IACpB,MAAM,CAACC,OAAOC,SAAS,GAAG,IAAA,iNAAQ,EAAC;IAEvC,SAASC;QACPD,SAASD,QAAQ;IACnB;IAEA,qBAAO,8OAAC;QAAOG,SAASD;;YAAa;YAAOF;YAAM;;;;;;;AAClD"}},
+    {"offset": {"line": 35, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/USER/OneDrive/Desktop/WDD430-Web-full-stack-development/node_modules/next/src/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.ts"],"sourcesContent":["module.exports = (\n  require('../../module.compiled') as typeof import('../../module.compiled')\n).vendored['react-ssr']!.ReactJsxDevRuntime\n"],"names":["module","exports","require","vendored","ReactJsxDevRuntime"],"mappings":"AAAAA,OAAOC,OAAO,GACZC,QAAQ,4HACRC,QAAQ,CAAC,YAAY,CAAEC,kBAAkB","ignoreList":[0]}}]
+}
