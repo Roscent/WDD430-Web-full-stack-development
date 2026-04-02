@@ -1,8 +1,8 @@
 import SideNav from '@/app/ui/dashboard/sidenav';
 import { redirect } from 'next/navigation';
 import { Metadata } from 'next';
-import { auth } from '@/app/auth'; 
- 
+import { auth } from '@/auth';  
+
 export const metadata: Metadata = {
   title: {
     template: '%s | Acme Dashboard',
@@ -12,9 +12,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
 };
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+export default async function Layout({ children }: { children: React.ReactNode }) {
   const session = await auth();
-
+  
   if (!session?.user) {
     redirect('/login');
   }
