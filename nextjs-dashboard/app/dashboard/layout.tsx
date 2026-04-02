@@ -1,5 +1,7 @@
 import SideNav from '@/app/ui/dashboard/sidenav';
+import { redirect } from 'next/navigation';
 import { Metadata } from 'next';
+import { auth } from '@/app/auth'; 
  
 export const metadata: Metadata = {
   title: {
@@ -11,6 +13,12 @@ export const metadata: Metadata = {
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
+  const session = await auth();
+
+  if (!session?.user) {
+    redirect('/login');
+  }
+
   return (
     <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
       <div className="w-full flex-none md:w-64">
